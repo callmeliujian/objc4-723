@@ -1714,7 +1714,7 @@ static void reconcileInstanceVariables(Class cls, Class supercls, const class_ro
 * Returns the real class structure for the class. 
 * Locking: runtimeLock must be write-locked by the caller
 **********************************************************************/
-static Class realizeClass(Class cls)
+static Class realizeClass(Class cls) // 在类第一次初始化时被调用，它会开辟 class_rw_t 的空间，并将 class_ro_t 指针赋值给 class_rw_t->ro
 {
     runtimeLock.assertWriting();
 

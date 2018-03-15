@@ -525,7 +525,7 @@ struct locstamped_category_list_t {
 #endif
 
 
-struct class_ro_t {
+struct class_ro_t { // 存储的大多是类在编译时就已经确定的信息
     uint32_t flags;
     uint32_t instanceStart;
     uint32_t instanceSize;
@@ -798,7 +798,7 @@ class protocol_array_t :
 };
 
 
-struct class_rw_t {
+struct class_rw_t { // 提供了运行时对类拓展的能力
     // Be warned that Symbolication knows the layout of this structure.
     uint32_t flags;
     uint32_t version;
