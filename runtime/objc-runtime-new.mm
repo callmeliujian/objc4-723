@@ -618,6 +618,7 @@ prepareMethodLists(Class cls, method_list_t **addedLists, int addedCount,
 // Attach method lists and properties and protocols from categories to a class.
 // Assumes the categories in cats are all loaded and sorted by load order, 
 // oldest categories first.
+// 将方法列表，属性，协议从category中添加等到类
 static void 
 attachCategories(Class cls, category_list *cats, bool flush_caches)
 {
