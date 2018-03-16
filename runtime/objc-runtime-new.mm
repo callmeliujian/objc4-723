@@ -3539,6 +3539,10 @@ protocol_copyPropertyList2(Protocol *proto, unsigned int *outCount,
     return (objc_property_t *)copyPropertyList(plist, outCount);
 }
 
+/**
+ * 获取协议中的属性
+ * 属性列表是个数组，每个元素内容都是一个 objc_property_t 指针，而这两个函数返回的值是指向这个数组的指针
+ */
 objc_property_t *
 protocol_copyPropertyList(Protocol *proto, unsigned int *outCount)
 {
@@ -4016,6 +4020,12 @@ class_copyIvarList(Class cls, unsigned int *outCount)
 * Does not copy any superclass's properties.
 * Locking: read-locks runtimeLock
 **********************************************************************/
+
+/**
+ * 获取类中的属性
+ * 属性列表是个数组，每个元素内容都是一个 objc_property_t 指针，而这两个函数返回的值是指向这个数组的指针
+ */
+
 objc_property_t *
 class_copyPropertyList(Class cls, unsigned int *outCount)
 {

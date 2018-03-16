@@ -50,6 +50,7 @@ typedef struct objc_ivar *Ivar;
 typedef struct objc_category *Category;
 
 /// An opaque type that represents an Objective-C declared property.
+/// 代表Objective-C声明属性的不透明类型
 typedef struct objc_property *objc_property_t;
 
 struct objc_class {
