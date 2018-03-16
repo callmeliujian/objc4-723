@@ -205,9 +205,9 @@ struct entsize_list_tt {
 
 
 struct method_t {
-    SEL name;
-    const char *types;
-    IMP imp;
+    SEL name; // 方法名 相同名字的方法即使在不同类中定义，它们的方法选择器也相同。
+    const char *types; // 方法类型 储着方法的参数类型和返回值类型
+    IMP imp; // 方法实现 函数指针
 
     struct SortBySELAddress :
         public std::binary_function<const method_t&,

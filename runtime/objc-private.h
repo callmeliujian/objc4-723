@@ -276,8 +276,8 @@ private:
 
 
 #if __OBJC2__
-typedef struct method_t *Method;
-typedef struct ivar_t *Ivar;
+typedef struct method_t *Method; // 某个方法的类型
+typedef struct ivar_t *Ivar; // 类中实例变量的类型
 typedef struct category_t *Category;
 typedef struct property_t *objc_property_t;
 #else
